@@ -1,0 +1,41 @@
+[
+  {
+    "title": "Neural Style Transfer App",
+    "description": "Real-time artistic style transfer using deep convolutional neural networks with a web interface.",
+    "tags": ["TensorFlow", "React", "Computer Vision", "Deep Learning"],
+    "domain": "Deep Learning",
+    "github": "https://github.com/yourname/style-transfer",
+    "demo": "https://demo.example.com/style-transfer",
+    "date": "2025-06-10"
+  },
+  {
+    "title": "Sentiment Analysis Platform",
+    "description": "Multi-language sentiment analysis using transformer models. Social media ingestion and real-time insights dashboard.",
+    "tags": ["BERT", "NLP", "Python", "FastAPI", "Docker"],
+    "domain": "NLP",
+    "github": "https://github.com/yourname/sentiment-platform",
+    "demo": "https://demo.example.com/sentiment",
+    "date": "2025-05-20"
+  },
+  {
+    "title": "Medical Imaging Classification",
+    "description": "Chest X-ray pathology detection with Grad-CAM explanations and evaluation toolkit.",
+    "tags": ["PyTorch", "Healthcare", "Explainability"],
+    "domain": "Healthcare",
+    "github": "https://github.com/yourname/med-imaging",
+    "demo": "",
+    "date": "2025-04-14"
+  },
+  {
+    "title": "Data Engineering Pipeline",
+    "description": "Batch + streaming ETL with data quality checks, feature store, and analytics-ready warehouse.",
+    "tags": ["Data Engineering", "ETL", "MLflow"],
+    "domain": "Data Science",
+    "github": "https://github.com/yourname/data-pipeline",
+    "demo": "",
+    "date": "2024-12-01"
+  }
+]
+
+
+

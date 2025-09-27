@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details — Mbark</title>
+    <meta name="theme-color" content="#0b0f19">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html#home" class="brand">Mbark<span class="accent">.</span></a>
+            <nav class="nav" aria-label="Primary">
+                <ul class="nav-list" style="display:flex;gap:18px;">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="actions">
+                <button id="themeToggle" class="btn-secondary" aria-label="Toggle theme">🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <a class="btn-tertiary" href="index.html#projects">← Back to projects</a>
+            <article id="projectDetail" class="card" style="margin-top:14px;"></article>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container row space-between align-center">
+            <p>© <span id="year"></span> Mbark. All rights reserved.</p>
+            <div class="row gap-sm">
+                <a href="index.html#home">Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/utils.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+    <script src="scripts/config.js" defer></script>
+    <script src="scripts/project.js" defer></script>
+    <script src="scripts/script.js" defer></script>
+</body>
+</html>
+
+

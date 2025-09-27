@@ -1,0 +1,21 @@
+[
+  {
+    "role": "AI Research Engineer",
+    "org": "MedVision Labs",
+    "start": "2025-03-01",
+    "end": null,
+    "description": "Lead prototypes for clinical imaging models (segmentation, classification) and model explainability dashboards.",
+    "tags": ["Computer Vision", "PyTorch", "MLOps"]
+  },
+  {
+    "role": "Full‑Stack ML Project",
+    "org": "Ensimag",
+    "start": "2024-09-01",
+    "end": "2025-01-31",
+    "description": "End‑to‑end pipeline with feature store, training, and reporting dashboard.",
+    "tags": ["MLflow", "Dashboards", "ETL"]
+  }
+]
+
+
+
