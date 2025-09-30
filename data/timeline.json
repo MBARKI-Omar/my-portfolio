@@ -1,7 +1,8 @@
 [
-  { "title": "Ensimag — ISI", "place": "Grenoble INP", "date": "2023–2026", "description": "Engineering track in Information Systems & AI." },
-  { "title": "Master of AI", "place": "Concurrent", "date": "2024–2026", "description": "Advanced machine learning, optimization, and data science." },
-  { "title": "PFE (Planned)", "place": "To be determined", "date": "2026", "description": "Applied research in medical AI." }
+  { "title": "Bachelor in Computer Science", "place": "ISI", "date": "2021-2024", "description": "Bachelor degree in Computer Science." },
+  { "title": "Information systems engineering", "place": "ENSIMAG", "date": "2024-2026", "description": "Engineering degree in Information Systems." },
+  { "title": "Master of AI", "place": "ENSIMAG", "date": "2025-2026", "description": "Advanced machine learning, Statistics, and data science." },
+  { "title": "PFE", "place": "Your company!", "date": "2026", "description": "Applied research in AI" }
 ]
 
 

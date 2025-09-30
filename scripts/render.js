@@ -35,28 +35,96 @@ async function loadJSON(path) {
 function applyReveal(el) { el.setAttribute('data-reveal', ''); }
 
 // Timeline removed in redesign
+async function renderTimeline() {
+  const list = qs('#timeline'); if (!list) return;
+  try {
+    const items = await loadJSON('data/timeline.json');
+    list.innerHTML = '';
+    items.forEach(t => {
+      const li = create('li');
+      li.className = 'timeline-item';
+      const school = String(t.place || '');
+      const date = String(t.date || '');
+      const program = String(t.title || '');
+      const desc = t.description ? String(t.description) : '';
+      li.innerHTML = `
+        <div class="tl-head">
+          <div class="tl-school">${school}</div>
+          <div class="tl-date">${date}</div>
+        </div>
+        <div class="dot" aria-hidden="true"></div>
+        <div class="tl-body">
+          <div class="tl-title">${program}</div>
+          ${desc ? `<div class="tl-desc">${desc}</div>` : ''}
+        </div>`;
+      list.appendChild(li);
+    });
+  } catch (e) {
+    console.error(e);
+  }
+}
 
 // Experience
+let allExperience = [];
+let showAllExperience = false;
+
 async function renderExperience() {
   const grid = qs('#experienceList'); if (!grid) return;
-  const items = await loadJSON('data/experience.json');
-  grid.innerHTML = '';
-  items.forEach(exp => {
-    const card = create('article', { className: 'card exp-card selectable' }); applyReveal(card);
-    card.innerHTML = `<h4>${exp.role}</h4>
-      <div class="exp-meta">${exp.org} • ${formatDate(exp.start)} – ${exp.end ? formatDate(exp.end) : 'Present'}</div>
-      <p>${exp.description}</p>
-      <div class="tags">${(exp.tags||[]).map(t=>`<span class="tag">${t}</span>`).join('')}</div>`;
-    const slug = slugify(exp.role + '-' + (exp.org||''));
-    card.style.cursor = 'pointer';
-    card.addEventListener('click', () => {
-      card.classList.add('selecting');
-      setTimeout(() => {
-        window.location.href = `experience.html?slug=${encodeURIComponent(slug)}`;
-      }, 140);
+  allExperience = await loadJSON('data/experience.json').catch(() => DEFAULT_EXPERIENCE);
+
+  // Ensure toggle control exists
+  let toggle = qs('#experienceToggle');
+  if (!toggle) {
+    toggle = create('button', { id: 'experienceToggle', className: 'btn-tertiary' });
+    const container = grid.parentElement; // .container
+    container.appendChild(toggle);
+    toggle.addEventListener('click', () => {
+      showAllExperience = !showAllExperience;
+      drawExperience();
     });
-    grid.appendChild(card);
-  });
+  }
+
+  drawExperience();
+}
+
+function drawExperience() {
+  const grid = qs('#experienceList'); if (!grid) return;
+  grid.innerHTML = '';
+
+  // Preserve the order as defined in data/experience.json
+  const list = showAllExperience ? allExperience : allExperience.slice(0, 4);
+
+  if (list.length === 0) {
+    const empty = create('div', { className: 'meta' });
+    empty.textContent = 'No experience to display.';
+    grid.appendChild(empty);
+  } else {
+    list.forEach(exp => {
+      const card = create('article', { className: 'card exp-card selectable' }); applyReveal(card);
+      card.innerHTML = `<h4>${exp.role}</h4>
+        <div class="exp-meta">${exp.org} • ${formatDate(exp.start)} – ${exp.end ? formatDate(exp.end) : 'Present'}</div>
+        <p>${exp.description}</p>
+        <div class="tags">${(exp.tags||[]).map(t=>`<span class="tag">${t}</span>`).join('')}</div>`;
+      const slug = slugify(exp.role + '-' + (exp.org||''));
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', () => {
+        card.classList.add('selecting');
+        setTimeout(() => {
+          window.location.href = `experience.html?slug=${encodeURIComponent(slug)}`;
+        }, 140);
+      });
+      grid.appendChild(card);
+    });
+  }
+
+  const toggle = qs('#experienceToggle');
+  if (toggle) {
+    const moreExists = allExperience.length > 4;
+    toggle.style.display = moreExists ? 'inline-flex' : 'none';
+    toggle.textContent = showAllExperience ? 'Show less ▲' : 'Show more ▼';
+  }
+
+  if (window.revealObserveAll) window.revealObserveAll();
 }
 
 // Projects
@@ -122,6 +190,16 @@ function drawProjects(filter) {
           <p>${p.description}</p>
           <div class="tags">${tags}</div>
         </div>`;
+      // If image provided, use it as media background
+      const media = card.querySelector('.project-media');
+      if (p.img && typeof p.img === 'string' && p.img.trim()) {
+        media.style.backgroundImage = `url("${p.img}")`;
+        media.style.backgroundSize = 'cover';
+        media.style.backgroundPosition = 'center';
+        media.style.backgroundRepeat = 'no-repeat';
+        media.style.opacity = '1';
+        media.style.filter = 'none';
+      }
       card.style.cursor = 'pointer';
       card.addEventListener('click', () => {
         card.classList.add('selecting');
@@ -175,7 +253,8 @@ window.addEventListener('DOMContentLoaded', async () => {
     setupProjectFilters();
     await Promise.all([
       renderExperience(),
-      renderProjects()
+      renderProjects(),
+      renderTimeline()
     ]);
   } catch (e) { console.error(e); }
 });

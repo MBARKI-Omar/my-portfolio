@@ -13,11 +13,14 @@
 </head>
 <body>
     <header class="site-header">
+        <div class="progress" id="progress"></div>
         <div class="container header-inner">
             <a href="index.html#home" class="brand">Omar M'BARKI</a>
             <nav class="nav" aria-label="Primary">
-                <ul class="nav-list" style="display:flex;gap:18px;">
+                <button class="nav-toggle" aria-expanded="false" aria-label="Open menu">☰</button>
+                <ul class="nav-list">
                     <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
                     <li><a href="index.html#experience">Experience</a></li>
                     <li><a href="index.html#projects">Projects</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
@@ -25,6 +28,7 @@
             </nav>
             <div class="actions">
                 <button id="themeToggle" class="btn-secondary" aria-label="Toggle theme">🌙</button>
+                <a id="downloadCV" class="btn-primary" href="Resume.pdf" download>Download CV</a>
             </div>
         </div>
     </header>
@@ -39,12 +43,10 @@
     <footer class="site-footer">
         <div class="container row space-between align-center">
             <p>© <span id="year"></span> Mbark. All rights reserved.</p>
-            <div class="row gap-sm">
-                <a href="index.html#home">Top</a>
-            </div>
         </div>
     </footer>
 
+    <script src="scripts/router.js" defer></script>
     <script src="scripts/utils.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
     <script src="scripts/config.js" defer></script>

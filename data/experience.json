@@ -1,21 +1,163 @@
 [
   {
-    "role": "AI Research Engineer",
-    "org": "MedVision Labs",
-    "start": "2025-03-01",
-    "end": null,
-    "description": "Lead prototypes for clinical imaging models (segmentation, classification) and model explainability dashboards.",
-    "tags": ["Computer Vision", "PyTorch", "MLOps"]
+    "role": "Data Engineer Intern",
+    "org": "Forvia",
+    "start": "2025-06-01",
+    "end": "2025-08-31",
+    "description": "ETL and BI project in Palantir Foundry on ServiceNow data.",
+    "tags": ["Palantir Foundry","SparkQL","SQL","ETL","Dashboards"],
+    "projectName": "Incident Analytics Platform",
+    "context": "Global support team needed real-time incident insights.",
+    "projectDescription": "Ingested and transformed ServiceNow tickets and built dashboards for stakeholders.",
+    "roleContributions": [
+      "Owned ingestion and transformation layers",
+      "Defined business metrics with stakeholders"
+    ],
+    "toolsTechnologies": ["Foundry", "SparkQL", "SQL", "Power BI"],
+    "challengesSolutions": [
+      "High-cardinality metrics → aggregated rollups",
+      "Slow queries → partitioning + caching"
+    ],
+    "resultsImpact": "Reduced report preparation time from 5h to 5min, enabling near real-time monitoring.",
+    "learningsTakeaways": "Learned the importance of data contracts and incremental modeling.",
+    "report": "reports/Forvia_report_Omar_MBARKI.pdf"
   },
   {
-    "role": "Full‑Stack ML Project",
-    "org": "Ensimag",
-    "start": "2024-09-01",
-    "end": "2025-01-31",
-    "description": "End‑to‑end pipeline with feature store, training, and reporting dashboard.",
-    "tags": ["MLflow", "Dashboards", "ETL"]
+    "role": "Data Scientist Intern",
+    "org": "PwC TAC",
+    "start": "2024-02-01",
+    "end": "2024-06-30",
+    "description": "AI solution for resume parsing and job matching.",
+    "tags": ["NLP","TensorFlow","CNN","RNN","LLM","Data Analysis"],
+    "projectName": "AI Resume Analyzer",
+    "context": "HR department needed to automate resume screening and candidate-job matching.",
+    "projectDescription": "Developed an NLP pipeline for CV parsing and a web platform for recruiter use.",
+    "roleContributions": [
+      "Designed and trained CNN/RNN models",
+      "Led a team of 2 interns for model and frontend integration"
+    ],
+    "toolsTechnologies": ["TensorFlow","Python","Power BI"],
+    "challengesSolutions": [
+      "Messy resume formats → OCR preprocessing pipeline",
+      "High false positives → tuned thresholds and retrained embeddings"
+    ],
+    "resultsImpact": "Cut recruiter workload by >80% and reduced screening time to 1h per batch.",
+    "learningsTakeaways": "Gained experience in NLP pipelines and team leadership.",
+    "report": "reports/PwC_TAC_report_Omar_MBARKI.pdf"
+  },
+  {
+    "role": "Data Scientist Intern",
+    "org": "Intech",
+    "start": "2023-06-01",
+    "end": "2023-07-31",
+    "description": "Medical ML project for newborn cardiac state and breast cancer detection.",
+    "tags": ["Healthcare AI","XGBoost","SVM","Deep Learning","TensorFlow"],
+    "projectName": "Medical Diagnostics Models",
+    "context": "Healthcare partner needed predictive support for newborn monitoring and cancer detection.",
+    "projectDescription": "Developed classification models for cardiac state and breast cancer prediction.",
+    "roleContributions": [
+      "Built classification models",
+      "Collaborated with 5 engineers on model validation"
+    ],
+    "toolsTechnologies": ["XGBoost","SVM","CNN","ViT"],
+    "challengesSolutions": [
+      "Highly imbalanced datasets → applied resampling + weighted losses",
+      "Low interpretability → applied SHAP analysis"
+    ],
+    "resultsImpact": "Achieved ~97% accuracy on cardiac model, competitive F1-score on cancer detection.",
+    "learningsTakeaways": "Understood challenges of imbalanced medical datasets.",
+    "report": "reports/Intech_report_Omar_MBARKI.pdf"
+  },
+  {
+    "role": "Back-end Developer Intern",
+    "org": "Wevioo",
+    "start": "2022-07-01",
+    "end": "2022-07-31",
+    "description": "Integration of Alfresco GED with a corporate web platform.",
+    "tags": ["Java","APIs","GED","Back-end Development"],
+    "projectName": "Document Management Automation",
+    "context": "Enterprise needed automated document workflows between GED and web platform.",
+    "projectDescription": "Connected Alfresco APIs to the company’s platform and validated integration.",
+    "roleContributions": [
+      "Implemented back-end API connectors",
+      "Tested and validated document synchronization"
+    ],
+    "toolsTechnologies": ["Java","Alfresco API","CMS"],
+    "challengesSolutions": [
+      "Complex API schema → created mapping layer",
+      "Stability issues → added retry & logging mechanisms"
+    ],
+    "resultsImpact": "Improved efficiency of document handling and reduced manual processing.",
+    "learningsTakeaways": "Gained experience in enterprise content management systems.",
+    "report": "reports/Wevioo_report_Omar_MBARKI.pdf"
+  },
+  {
+    "role": "Full-Stack Developer Intern",
+    "org": "Codex Junior Enterprise",
+    "start": "2022-01-01",
+    "end": "2023-01-01",
+    "description": "Client projects for website development.",
+    "tags": ["Full-Stack Development","CMS","JavaScript","SQL","PLSQL"],
+    "projectName": "Client Web Platforms",
+    "context": "Junior Enterprise delivering websites for SMEs and associations.",
+    "projectDescription": "Analyzed requirements, contributed to specs, and delivered websites.",
+    "roleContributions": [
+      "Gathered requirements with clients",
+      "Developed front-end and back-end features"
+    ],
+    "toolsTechnologies": ["CMS","HTML","CSS","SQL","PLSQL"],
+    "challengesSolutions": [
+      "Unclear specs → iterative client validation",
+      "Deployment issues → set up CI/CD scripts"
+    ],
+    "resultsImpact": "Delivered multiple client websites on time and with good feedback.",
+    "learningsTakeaways": "Learned project lifecycle in a consulting-like context.",
+    "report": "reports/Codex_report_Omar_MBARKI.pdf"
+  },
+  {
+    "role": "Front-end Developer Intern",
+    "org": "Famy",
+    "start": "2022-06-01",
+    "end": "2022-06-30",
+    "description": "Development of a cloud infrastructure management platform UI.",
+    "tags": ["React","Angular","JavaScript","Front-end"],
+    "projectName": "Cloud Infra Platform UI",
+    "context": "Startup needed a user interface for cloud infrastructure management.",
+    "projectDescription": "Developed and validated the platform’s front-end.",
+    "roleContributions": [
+      "Implemented UI components",
+      "Validated front-end with CTO"
+    ],
+    "toolsTechnologies": ["React","Angular","CSS","HTML"],
+    "challengesSolutions": [
+      "Complex UX flows → simplified navigation",
+      "Cross-browser issues → standardized stylesheets"
+    ],
+    "resultsImpact": "Delivered a validated front-end for cloud platform MVP.",
+    "learningsTakeaways": "Strengthened front-end development skills with React/Angular.",
+    "report": "reports/Famy_report_Omar_MBARKI.pdf"
+  },
+  {
+    "role": "Assistant Developer Intern",
+    "org": "Big Data Consulting Firm",
+    "start": "2020-04-01",
+    "end": "2020-08-31",
+    "description": "Big data analysis of SAMU emergency calls during COVID-19.",
+    "tags": ["Hadoop","Pig Latin","Power BI","ETL","SQL"],
+    "projectName": "COVID-19 Emergency Calls Dashboard",
+    "context": "Healthcare authorities needed insights from emergency call data during the pandemic.",
+    "projectDescription": "Analyzed SAMU calls and built dashboards for crisis response.",
+    "roleContributions": [
+      "Extracted and transformed call data",
+      "Developed Power BI dashboards"
+    ],
+    "toolsTechnologies": ["Hadoop","Pig Latin","Power BI","SQL"],
+    "challengesSolutions": [
+      "Large unstructured data → Hadoop preprocessing",
+      "Rapid reporting needs → automated ETL pipeline"
+    ],
+    "resultsImpact": "Provided timely insights for healthcare managers during the crisis.",
+    "learningsTakeaways": "First exposure to big data ecosystems and crisis analytics.",
+    "report": "reports/BigData_SAMU_report_Omar_MBARKI.pdf"
   }
 ]
-
-
-

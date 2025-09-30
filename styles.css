@@ -87,8 +87,7 @@ body::after {
   .grid-2 { grid-template-columns: 1.2fr 0.8fr; gap: 48px; }
   .grid-3 { grid-template-columns: repeat(3, 1fr); gap: 22px; }
 }
-.projects-list { display: grid; grid-template-columns: 1fr; gap: 22px; }
-#projectsGrid { display: grid; grid-template-columns: 1fr; gap: 22px; }
+#projectsGrid { display: grid; grid-template-columns: 1fr; gap: 22px; position: relative; z-index: 1; }
 #projectsGrid.grid-3 { grid-template-columns: 1fr; }
 
 /* Header */
@@ -153,9 +152,25 @@ body::after {
 .card { position: relative; background: color-mix(in oklab, var(--card) 92%, transparent); border: 1px solid var(--border); border-radius: 14px; padding: 16px; box-shadow: var(--shadow); overflow: hidden; }
 .card::before { content: ""; position: absolute; inset: -1px; border-radius: 14px; padding: 1px; background: linear-gradient(135deg, color-mix(in oklab, var(--accent) 40%, transparent), color-mix(in oklab, var(--primary) 40%, transparent)); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none; }
 .card::after { content: ""; position: absolute; inset: -40% -20% auto -20%; height: 70%; background: radial-gradient(400px 200px at 30% 40%, color-mix(in oklab, var(--accent) 18%, transparent), transparent 60%); filter: blur(40px); opacity: .35; pointer-events: none; }
-.timeline { list-style: none; padding: 0; margin: 0; border-left: 2px solid var(--border); }
-.timeline li { position: relative; margin: 0 0 16px 16px; padding-left: 14px; }
-.timeline li::before { content: ""; position: absolute; left: -20px; top: 4px; width: 10px; height: 10px; background: var(--accent); border-radius: 999px; box-shadow: 0 0 0 4px color-mix(in oklab, var(--accent) 30%, transparent); }
+.timeline { list-style: none; padding: 0; margin: 0; }
+.timeline-horizontal { position: relative; display: grid; grid-auto-flow: column; grid-auto-columns: minmax(260px, 1fr); gap: 48px; align-items: center; justify-items: center; padding: 30px 0 34px; }
+.timeline-horizontal::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 2px; background: var(--border); }
+.timeline-item { position: relative; min-height: 220px; text-align: center; }
+.timeline-item .dot { position: absolute; top: calc(50% - 10px); left: 50%; transform: translateX(-50%); width: 20px; height: 20px; border-radius: 999px; background: var(--accent); box-shadow: 0 0 0 6px color-mix(in oklab, var(--accent) 30%, transparent); }
+
+/* Header above the line */
+.tl-head { position: absolute; bottom: calc(50% + 16px); left: 50%; transform: translateX(-50%); display: grid; gap: 8px; }
+.tl-school { font-weight: 800; font-size: clamp(16px, 1.8vw, 20px); }
+.tl-date { color: var(--muted); font-weight: 600; font-size: 14px; }
+
+/* Body below the line */
+.tl-body { position: absolute; top: calc(50% + 16px); left: 50%; transform: translateX(-50%); display: grid; gap: 10px; width: auto; max-width: 680px; padding: 0 8px; text-align: center; justify-items: center; }
+.tl-title { font-weight: 700; font-size: clamp(16px, 1.9vw, 22px); }
+.tl-desc { color: var(--text); opacity: .92; font-size: 16px; line-height: 1.65; text-align: center; margin-left: auto; margin-right: auto; max-width: 24ch; min-width: 16ch; white-space: normal; word-break: normal; overflow-wrap: break-word; }
+
+/* Spacing around About timeline and cards */
+#about #timeline { margin: 0 0 44px; }
+.about-grid { margin-top: 28px; }
 .about .center { text-align: center; }
 .about h2.center { text-align: left; margin-left: 0; margin-right: auto; }
 .about .lede.center { text-align: left; margin-left: 0; margin-right: auto; }
@@ -190,7 +205,8 @@ body::after {
 @media (min-width: 900px) {
   .project { grid-template-columns: 1.2fr 1.8fr; align-items: center; }
 }
-.project::before { content: ""; display: block; aspect-ratio: 16/9; border-radius: 12px; background: linear-gradient(135deg, color-mix(in oklab, var(--accent) 28%, transparent), color-mix(in oklab, var(--primary) 28%, transparent)); opacity: .5; }
+.project::before { content: none; }
+.project .project-media { display: block; width: 100%; aspect-ratio: 16/9; border-radius: 12px; background: linear-gradient(135deg, color-mix(in oklab, var(--accent) 28%, transparent), color-mix(in oklab, var(--primary) 28%, transparent)); opacity: .5; }
 .tags { display: flex; gap: 8px; flex-wrap: wrap; }
 .tag { font-size: 12px; color: #ffffff; background: var(--primary); border: 1px solid transparent; padding: 5px 10px; border-radius: 999px; }
 .chip { font-size: 14px; padding: 8px 12px; border-radius: 999px; border: 1px solid var(--border); background: var(--card); color: var(--text); cursor: pointer; }

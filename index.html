@@ -67,7 +67,15 @@
         <section id="about" class="section">
             <div class="container about">
                 <h2 class="center">About <span class="gradient">Me</span></h2>
-                <p class="lede center">Transforming ideas into intelligent solutions through the power of machine learning.</p>
+                <p id="aboutBio" class="lede" style="margin:10px 0 18px; text-align:left;">
+                    I’m an AI/ML engineer who enjoys building end-to-end solutions—from raw data to deployed models that actually get used. 
+                    I like tackling real problems where machine learning can bring clear value, especially in areas like healthcare, finance, and improving how models work. 
+                    My approach is practical and hands-on: I care about making systems reliable, understandable, and impactful, not just experimental.
+                </p>
+                <div class="stack" style="margin:4px 0 18px;">
+                    <h3>Studies Timeline</h3>
+                    <ul id="timeline" class="timeline timeline-horizontal"></ul>
+                </div>
                 <div class="about-grid">
                     <article class="card feature" data-reveal>
                         <div class="feature-icon">🧠</div>
@@ -141,12 +149,10 @@
                 <div class="row align-center space-between">
                     <h2>Projects</h2>
                     <div class="filters">
+                        <!-- the name of "data-filter" of the button added here will select the projects having the tag of the same name in the projects.json file -->
                         <button class="chip active" data-filter="all">All</button>
-                        <button class="chip" data-filter="ML">ML</button>
-                        <button class="chip" data-filter="Data Science">Data Science</button>
                         <button class="chip" data-filter="Healthcare">Healthcare</button>
                         <button class="chip" data-filter="Finance">Finance</button>
-                        <button class="chip" data-filter="Personal">Personal</button>
                     </div>
                 </div>
                 <div id="projectsGrid" class="grid-3"></div>
@@ -220,7 +226,7 @@
 
     <footer class="site-footer">
         <div class="container row space-between align-center">
-            <p>© <span id="year"></span> Mbark. All rights reserved.</p>
+            <p>© <span id="year"></span> Omar M'BARKI All rights reserved.</p>
             <div class="row gap-sm">
                 <a href="#home">Top</a>
             </div>

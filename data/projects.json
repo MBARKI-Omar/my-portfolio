@@ -1,41 +1,71 @@
 [
   {
-    "title": "Neural Style Transfer App",
-    "description": "Real-time artistic style transfer using deep convolutional neural networks with a web interface.",
-    "tags": ["TensorFlow", "React", "Computer Vision", "Deep Learning"],
-    "domain": "Deep Learning",
-    "github": "https://github.com/yourname/style-transfer",
-    "demo": "https://demo.example.com/style-transfer",
-    "date": "2025-06-10"
-  },
-  {
-    "title": "Sentiment Analysis Platform",
-    "description": "Multi-language sentiment analysis using transformer models. Social media ingestion and real-time insights dashboard.",
-    "tags": ["BERT", "NLP", "Python", "FastAPI", "Docker"],
-    "domain": "NLP",
-    "github": "https://github.com/yourname/sentiment-platform",
-    "demo": "https://demo.example.com/sentiment",
-    "date": "2025-05-20"
-  },
-  {
-    "title": "Medical Imaging Classification",
-    "description": "Chest X-ray pathology detection with Grad-CAM explanations and evaluation toolkit.",
-    "tags": ["PyTorch", "Healthcare", "Explainability"],
+    "title": "Prostate Cancer Prediction",
+    "description": "Prediction of prostate cancer likelihood using regression models trained on clinical and biological attributes, with interpretability via feature importance analysis.",
+    "tags": ["Scikit-learn", "Regression", "Pandas", "Matplotlib", "Healthcare"],
     "domain": "Healthcare",
-    "github": "https://github.com/yourname/med-imaging",
-    "demo": "",
-    "date": "2025-04-14"
+    "img": "img/projects/prostate_classification.png",
+    "date": "2025-03-15",
+    "report": "reports/prostate_cancer_prediction.pdf",
+    "context": "Doctors and researchers need early indicators of prostate cancer risk from clinical data.",
+    "projectDescription": "Built regression models on patient datasets to estimate cancer probability and highlight relevant biomarkers.",
+    "roleContributions": [
+      "Cleaned and preprocessed medical datasets",
+      "Trained regression models (Linear, Ridge, Lasso)",
+      "Performed feature importance analysis"
+    ],
+    "toolsTechnologies": ["Scikit-learn", "Pandas", "Matplotlib", "NumPy"],
+    "challengesSolutions": [
+      "Imbalanced dataset → applied resampling techniques",
+      "Correlated variables → used regularization to improve stability"
+    ],
+    "resultsImpact": "Produced interpretable models to identify key clinical risk factors.",
+    "learningsTakeaways": "Gained experience handling medical data and balancing accuracy with interpretability."
   },
   {
-    "title": "Data Engineering Pipeline",
-    "description": "Batch + streaming ETL with data quality checks, feature store, and analytics-ready warehouse.",
-    "tags": ["Data Engineering", "ETL", "MLflow"],
+    "title": "Geographic Classification of Individuals",
+    "description": "Classification of individuals by geographic origin using demographic and genetic features, combined with PCA visualization and supervised learning.",
+    "tags": ["Classification", "PCA", "KNN", "SVM", "NumPy", "Matplotlib"],
     "domain": "Data Science",
-    "github": "https://github.com/yourname/data-pipeline",
-    "demo": "",
-    "date": "2024-12-01"
+    "img": "img/projects/geo_classification.png",
+    "date": "2025-04-15",
+    "report": "reports/geographic_classification.pdf",
+    "context": "Researchers needed to group individuals by geographic region based on high-dimensional features.",
+    "projectDescription": "Built a dimensionality reduction and classification pipeline using PCA and SVM/KNN.",
+    "roleContributions": [
+      "Applied PCA to reduce dimensionality",
+      "Trained classifiers (SVM, KNN) on reduced data",
+      "Visualized clusters in 2D PCA space"
+    ],
+    "toolsTechnologies": ["NumPy", "Scikit-learn", "Matplotlib"],
+    "challengesSolutions": [
+      "High dimensionality → PCA for variance preservation",
+      "Class overlap → optimized hyperparameters for SVM kernels"
+    ],
+    "resultsImpact": "Achieved 88% classification accuracy and provided clear PCA-based visual insights.",
+    "learningsTakeaways": "Learned to combine unsupervised dimensionality reduction with supervised classifiers."
+  },
+  {
+    "title": "Scikit-learn Library Contribution",
+    "description": "Open-source contribution to the Scikit-learn machine learning library, improving documentation and minor functionality.",
+    "tags": ["Open Source", "Scikit-learn", "Python"],
+    "domain": "Machine Learning",
+    "img": "img/projects/sklearn_contribution.png",
+    "date": "2025-09-01",
+    "report": "reports/sklearn_contribution.pdf",
+    "context": "Scikit-learn community needed bug fixes and clearer documentation for new users.",
+    "projectDescription": "Contributed to the open-source ML ecosystem by improving Scikit-learn features and docs.",
+    "roleContributions": [
+      "Fixed bugs and improved function consistency",
+      "Enhanced documentation and examples",
+      "Collaborated on GitHub pull requests with maintainers"
+    ],
+    "toolsTechnologies": ["Python", "Scikit-learn", "GitHub"],
+    "challengesSolutions": [
+      "Complex codebase → followed contributor guidelines",
+      "Community reviews → iterated on PRs based on feedback"
+    ],
+    "resultsImpact": "Merged contributions that improved usability for thousands of Scikit-learn users.",
+    "learningsTakeaways": "Learned open-source collaboration workflow and importance of clean, documented code."
   }
 ]
-
-
-
